@@ -1,0 +1,84 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter label {
+  margin-right: 10px;
+}
+
+.filter input {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background-color: #0056b3;
+}
+
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.property-list p {
+  font-style: italic;
+  color: #888;
+}
+.navbar {
+  background-color: #333334;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.property-card {
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin: 10px;
+}
+
+.property-image {
+display: inline-block;
+width: 200px; 
+}
+
+.property-image img {
+width: 100%;
+height: auto;
+}
+
+.property-details {
+display: inline-block;
+vertical-align: top; 
+margin-left: 10px; 
+padding: 10px;
+}
+
+.property-details h2 {
+margin-top: 0; 
+}
+
+.property-details p {
+margin: 5px 0; 
+}
