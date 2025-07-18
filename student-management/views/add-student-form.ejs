@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Add Students</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="/">All Students</a>
+            <a href="/addStudent">Add Students</a>
+            <a href="/removeStudent">Remove Students</a>
+            <a href="/modify">Update Students</a>
+        </nav>
+        <h1>Add a Student</h1>
+        <div class="add-student-container">
+            <form method="POST" action="/insert">
+                <input type="text" name="studentId" placeholder="Enter student id">
+                <input type="text" name="studentName" placeholder="Enter student name">
+                <input type="text" name="studentGPA" placeholder="Enter student GPA">
+
+                <div id="pg-container">
+                    <label>Post Graduate Student:</label>
+                    <input type="radio" name="studentPGStatus" value="yes">
+                    <label>Yes</label>
+                    <input type="radio" name="studentPGStatus" value="no">
+                    <label>No</label>
+                </div>
+                <button>Add student</button>                
+            </form>
+
+        </div>
+    </body>
+</html>

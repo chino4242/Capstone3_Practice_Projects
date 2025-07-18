@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Details</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<nav>
+		<a href="/">All Students</a>
+		<a href="/addStudent">Add Student</a>
+		<a href="/removeStudent">Remove Student</a>
+		<a href="/modify">Update Student</a>
+	</nav>
+	<h1 style="text-align: center;">Student Details</h1>
+	
+	<% if (!student) { %>
+		<p id="err">ERROR: Student not found.</p>
+		<a href="/">← Back to All Students</a>
+	<% } else { %>
+		<div class="student-details-container">
+			<p><strong>Name:</strong> <%= student.name %></p>
+			<p><strong>Email:</strong> <%= student.email %></p>
+			<p><strong>Student ID:</strong> <%= student.id %></p>
+			<p><strong>GPA:</strong> <%= student.gpa %></p>
+			<p><strong>Postgraduate:</strong> <%= student.isPG ? 'Yes' : 'No' %></p>
+			
+			<a href="/">← Back to All Students</a>
+		</div>
+	<% } %>
+</body>
+</html>

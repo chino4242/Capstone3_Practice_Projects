@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>All Students</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<nav>
+		<a href="/">All Students</a>
+		<a href="/addStudent">Add Student</a>
+		<a href="/removeStudent">Remove Student</a>
+		<a href="/modify">Update Student</a>
+	</nav>
+	<h1 style="text-align: center;">All Students</h1>
+	
+	<% if(studentsList.length === 0) { %>
+		<p id="err">ERROR: No matching Document found.</p>
+	<% } else { %>
+		<div class="table-container">
+			<table class="students-table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Student ID</th>
+						<th>GPA</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(let student of studentsList) { %>
+						<tr>
+							<td><%= student.name %></td>
+							<td><%= student.email %></td>
+							<td><a href="/details/<%= student.id %>"><%= student.id %></a></td>
+							<td><%= student.gpa %></td>
+						</tr>
+					<% } %>
+				</tbody>
+			</table>
+		</div>
+	<% } %>
+</body>
+</html>

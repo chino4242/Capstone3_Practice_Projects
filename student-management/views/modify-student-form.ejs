@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Student</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">All Students</a>
+        <a href="/addStudent">Add Student</a>
+        <a href="/removeStudent">Remove Student</a>
+        <a href="/modify">Update Student</a>
+    </nav>
+    <h1>Update Student Information</h1>
+    <div class="modify-student">
+        <% for (let currItem of students) { %>
+            <div class="modify-student-container">
+                <form action="/change/<%= currItem._id %>" method="POST">
+
+                    <label>Student Name: <%= currItem.name%></label>
+
+                    <label>Student Id</label>
+                    <input type="text" value="<%= currItem.id %>" name="studentId" readonly />
+
+                    <label>GPA:</label>
+                    <input type="text" value="<%= currItem.gpa %>" name="updatedGPA" />
+
+                    <button>Submit</button>
+                </form>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>
