@@ -37,3 +37,5 @@ const EventForm = ({onEventAdd}) => {
         </form>
     );
 };
+
+export default EventForm;
